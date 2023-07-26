@@ -1,22 +1,22 @@
 {
-  "name": "nx-angular-nest-e2e",
+  "name": "client-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nx-angular-nest-e2e/src",
+  "sourceRoot": "apps/client-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/nx-angular-nest-e2e/cypress.config.ts",
-        "devServerTarget": "nx-angular-nest:serve:development",
+        "cypressConfig": "apps/client-e2e/cypress.config.ts",
+        "devServerTarget": "client:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "nx-angular-nest:serve:production"
+          "devServerTarget": "client:serve:production"
         },
         "ci": {
-          "devServerTarget": "nx-angular-nest:serve-static"
+          "devServerTarget": "client:serve-static"
         }
       }
     },
@@ -24,10 +24,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/nx-angular-nest-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/client-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["nx-angular-nest"]
+  "implicitDependencies": ["client"]
 }
