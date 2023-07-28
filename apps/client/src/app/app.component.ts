@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import {
-  ApiService,
-  DataAccessApiModule,
-} from '@nx-angular-nest/data-access-api';
-import { Message } from '@nx-angular-nest/api-interfaces';
+import { ApiService, DataAccessApiModule } from '@lib/data-access-api';
+import { Message } from '@lib/api-interfaces';
 import { JsonPipe } from '@angular/common';
 
 @Component({

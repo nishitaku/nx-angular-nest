@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@nx-angular-nest/api-interfaces';
+import { Message } from '@lib/api-interfaces';
 
 @Injectable({
   providedIn: 'root',
