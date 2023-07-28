@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import {
-  ApiServiceService,
+  ApiService,
   DataAccessApiModule,
 } from '@nx-angular-nest/data-access-api';
 import { Message } from '@nx-angular-nest/api-interfaces';
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   title = 'client';
   message: Message | null = null;
 
-  constructor(private apiService: ApiServiceService) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.apiService.getData().subscribe((data) => {

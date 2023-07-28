@@ -5,7 +5,7 @@ import { Message } from '@nx-angular-nest/api-interfaces';
 @Injectable({
   providedIn: 'root',
 })
-export class ApiServiceService {
+export class ApiService {
   constructor(private httpClient: HttpClient) {}
 
   getData() {

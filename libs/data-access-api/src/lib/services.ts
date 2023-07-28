@@ -1,1 +1,1 @@
-export { ApiServiceService } from './services/api-service.service';
+export { ApiService } from './services/api.service';
